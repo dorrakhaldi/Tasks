@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+enter username :<input type="text" id="user" >
+enter password :<input type="password" id="pass" >
+<input type="button" value="submit" onclick="check()"> 
+<script>
+    function check (){
+    let pass = document.getElementById('pass').value;
+    const passwords=pass.split(",");
+    var regex='^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.#@$]).{6,12}$';
+    for (let i=0;i <passwords.length ;i++){
+    if(passwords[i].match(regex)){
+      alert("password valid :" + passwords[i]) 
+    }
+    else{
+         alert("password invalid")
+    }}}
+</script>

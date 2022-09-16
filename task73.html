@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+enter array of numbers seperated by comma :<input type="text" id="arr" >
+enter x :<input type="number" id="x" >
+<input type="button" onclick="Search()" value="submit" >
+<script>
+function  binarySearch(array,x,min,high) {
+while (min <= high) {
+  var mid = min + Math.round((high - min) / 2);
+  if (array[mid] == x){
+        return mid;}
+      // Search the left half
+      if (array[mid] > x){
+      return binarySearch(array, x, min, mid - 1);}
+      // Search the right half
+      return binarySearch(array, x, mid + 1, high);
+    }
+return -1;
+
+}
+function Search(){
+let str=document.getElementById("arr").value;
+let array=str.split(",").map(i=>Number(i));
+let x =document.getElementById("x").value;
+let result = binarySearch(array, x, 0, array.length - 1);
+if (result > -1){
+    document.write("Element is present at index " + result);}
+else{
+    document.write("Not found");}}
+</script>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script>
+        const up = prompt("UP");
+        const down= prompt("Down");
+        const left = prompt("Left");
+        const right = prompt("right");
+       
+        var x=Math.abs(up-down);
+        var y=Math.abs(left-right);
+        var distance=Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+         document.write("Distance : "+Math.round(distance));
+    </script>

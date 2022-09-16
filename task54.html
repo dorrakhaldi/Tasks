@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <p id="demo"></p>
+<script>
+class shape {
+    constructor(length) {
+      this.length = length;
+    }
+    area() {
+      return 0;
+    }
+  }
+  
+  class square extends shape {
+    constructor(length) {
+      super(length);
+      this.length = length;
+    }
+    area(length) {
+      return length**2;
+    }
+  }
+  
+  let sqr = new square(2);
+  document.getElementById("demo").innerHTML = "area = " +sqr.area(sqr.length);
+</script>
+</body>

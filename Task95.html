@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+<script>
+class person {
+    constructor(gender) {
+      this.gender = gender;
+    }
+    getGender() {
+      return null;
+    }
+  }
+  
+  class Male extends person {
+    constructor(gender) {
+      super(gender);
+      this.gender = "Male";
+    }
+    getGender() {
+      return this.gender;
+    }
+  }
+  class Female extends person {
+    constructor(gender) {
+      super(gender);
+      this.gender = "Female";
+    }
+    getGender() {
+      return this.gender;
+    }
+  }
+  
+  let man = new Male();
+  let Fem = new Female();
+  document.getElementById("demo").innerHTML = "gender = " +man.getGender();
+  document.getElementById("demo1").innerHTML = "gender = " +Fem.getGender();
+</script>
+</body>
