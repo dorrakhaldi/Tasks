@@ -11,9 +11,9 @@ enter password :<input type="password" id="pass" >
     var regex='^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.#@$]).{6,12}$';
     for (let i=0;i <passwords.length ;i++){
     if(passwords[i].match(regex)){
-      alert("password valid :" + passwords[i]) 
+      document.write("password valid :" + passwords[i] +"<br>") ;
     }
     else{
-         alert("password invalid")
+         document.write(passwords[i] +"password invalid" +"<br>");
     }}}
 </script>

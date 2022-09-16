@@ -9,20 +9,18 @@ function result()
 {
 let x=document.getElementById('xx').value;
 let y=document.getElementById('yx').value;
-let result = new Array()
-let finalresult= [];
+let result = new Array();
+let finalresult= new Array();
 for (let i = 0; i < x; i++) {
     for (let j = 0; j < y; j++) {
         result.push(i*j);
       }
-    finalresult.push(result);
+    finalresult.push([result]);
     result = []; 
   }
   //to have the right display
-  document.write("result : [")
-  for (let i = 0; i < x; i++) {
-  document.write("["+finalresult[i] +"],");}
-  document.write("]");
+  document.write("result : [[")
+  document.write(finalresult.join("],\n[") + "]]");
 }
 </script>
 </body>
